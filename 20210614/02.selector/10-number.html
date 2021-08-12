@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+        .box::after { /*after는 모든 요소가 끝나고 박스 다음에 나와서 적용될 태그*/  
+            content: "항목을 골라주세요"; 
+            color: burlywood;
+        }
+        p::first-letter{font-size: 300%;}
+        p {border-bottom: 1px dashed #000;}
+        .box > p:last-child{border:none;}
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <p>회사</p>
+            <p>상품</p>
+            <p>서비스</p>
+        </div>
+    </body>
+</html>

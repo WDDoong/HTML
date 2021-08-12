@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>input과 form</title>
+    </head>
+    <body>
+        <h1>input 요소들</h1>
+        <form>
+            <!--fieldset은 여닫은 부분 사이를
+                사각형으로 영역을 만들어줌-->
+                <fieldset>
+                    <legend><h3>회원가입</h3></legend>
+                    <p>아이디 : <input type="text"></p>
+                    <p>비밀번호 : <input type="password"></p>
+                    <p>메일 수신여부 : <input type="radio" name="recieve">예
+                                      <input type="radio" name="recieve">아니오
+                    </p>
+                    <p><!--name이 그룹을 결정지음-->
+                        <!--radio는 무조건 하나를 골라야하는 전제이기 때문에 체크 해제가 될 수 없음(reset을 해야함)-->
+                        식사여부 : 
+                        <input type="radio" name="eat"/> 먹음
+                        <input type="radio" name="eat"/> 안먹음
+                        <input type="radio" name="eat"/> 먹는중
+                    </p>
+                    <p>현재 공부중인 것 : <!--radio는 name이 같은 그룹으로 묶였을 때 중복 선택 불가/ checkbox는 중복선택 가능-->
+                        <input type="checkbox" name="study"> HTML
+                        <input type="checkbox" name="study"> CSS
+                        <input type="checkbox" name="study"> JS
+                    </p>
+                    <p>
+                        제출
+                        <input type="submit" value="전송">
+                        <input type="reset" value="취소">
+                        <input type="button" value="확인">
+                    </p>
+                </fieldset>
+        </form>
+    </body>
+</html>
