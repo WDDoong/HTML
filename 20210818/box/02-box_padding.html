@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <style>
+      /*
+        padding : 값;                    - 4방향 모두 적은 값만큼 안으로 떨어뜨림
+        padding : 값1 값2;               - 상하는 값1, 좌우는 값2 만큼
+        padding : 값1 값2 값3;           - 위 값1, 좌우 값2, 밑 값3
+        padding : 값1 값2 값3 값4;       - 위 부터 시계방향으로 값1~값4 각각
+        
+        padding-top : 값;       - 위쪽만 값 적용
+        padding-right : 값;     - 오른쪽만
+        padding-left : 값;      - 왼쪽만
+        padding-bottom : 값;    - 아래쪽만
+
+    */
+      body {
+        font: 14px Gulim;
+        background: url("images/bg_grid.gif");
+      }
+      .dev {
+        width: 500px;
+        text-align: justify;
+        background: #ddf;
+        padding: 15px 0;
+      }
+      /*
+            padding에 값이 두 개면
+            1번은 상하,
+            2번은 좌우 적용
+            위아래 15픽셀, 왼오른 0픽셀 적용
+        */
+    </style>
+    <meta charset="UTF-8" />
+    <title>공간 주기</title>
+  </head>
+  <body>
+    <p>데브옵스는 뭘 하는 건가요?</p>
+    <p class="dev">시스템 구축에 운영까지 하는 최근 등장한 개념입니다.</p>
+  </body>
+</html>
