@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <style>
+      /*
+        기본적으로 레이아웃 작업할 때는
+        header, body, footer 세부분으로 분할 합니다.
+        header, footer는 그냥 한 부분으로 둬도 상관없지만
+        보통 많이 사용하는 레이아웃은 body쪽을 2~3분할 하기 때문에
+        이점을 감안해서 folat속성을 적절히 사용해주시고
+        float해제까지 해 주셔야 원하는 모양대로 사이트 구성이 됨에 유의해주세요.
+      */
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 500px;
+      }
+      #body {
+        position: relative;
+        border: 2px solid blueviolet;
+        height: 298px;
+        width: 500px;
+      }
+      #header {
+        position: relative;
+        height: 99px;
+        width: 500px;
+        border: 2px dotted red;
+      }
+      #content {
+        border: 1px solid orange;
+        width: 250px;
+        height: 298px;
+        position: absolute;
+        top: 0px;
+      }
+      #side {
+        border: 1px solid deepskyblue;
+        width: 250px;
+        height: 298px;
+        position: absolute;
+        left: 250px;
+        top: 0px;
+      }
+      #footer {
+        width: 500px;
+        height: 99px;
+        clear: both;
+        border: 2px dashed green;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <title>포지션 퀴-즈</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">헤더 자리</div>
+      <div id="body">
+        <div id="side">사이드바 자리</div>
+        <div id="content">콘텐츠 자리</div>
+      </div>
+      <div id="footer">푸터자리</div>
+    </div>
+  </body>
+</html>
