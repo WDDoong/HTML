@@ -17,7 +17,6 @@
       window.onload = function () {
         // dom요소 생성 (적용은 아직 안됨)
         var newPTag = document.createElement("p");
-        console.log(newPTag);
         var newBtn1 = document.createElement("button");
         var newBtn2 = document.createElement("button");
         // 태그 내부에 들어갈 문자는, createTextNode로 집어넣어준다.
@@ -37,6 +36,13 @@
         // 조립완료된 버튼들은 p태그에 끼워넣어줍니다.
         newPTag.append(newBtn1);
         newPTag.append(newBtn2);
+
+        // body태그에 p tag를 끼워넣어 주세요.
+        // 1. body태그를 얻어옵니다.
+        var bodyTag = document.getElementsByTagName("body")[0];
+        console.log(bodyTag);
+        // 2. 조립완료된 ptag를 끼워넣습니다.
+        bodyTag.appendChild(newPTag);
       };
     </script>
     <meta charset="UTF-8" />
