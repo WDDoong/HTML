@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      #menu {
+        background: grey;
+        width: 200px;
+        padding: 10px;
+        color: bisque;
+      }
+      #openMenu {
+        background: darksalmon;
+      }
+    </style>
+    <script>
+      /*
+            메뉴판을 만들어주시되
+            이번에는 click이벤트를 걸어서
+            버튼을 클릭하면 메뉴판이 보이고 다시 클릭하면
+            메뉴판이 사라지도록.
+            단, 메뉴판이 안보일때는 버튼 글씨가 "메뉴보기"이고
+            메뉴판이 보일때는 버튼 글씨가 "메뉴닫기"가 되도록 해주세요.
+        */
+      // InnerText로 변경하는 법
+      $(document).ready(function () {
+        $("#openMenu").click(function () {
+          $("#menuList").toggle("fast"); // 메뉴 노출 변화
+          if ($(this)[0].innerText === "메뉴닫기") {
+            $(this)[0].innerText = "메뉴보기";
+          } else if ($(this)[0].innerText === "메뉴보기") {
+            $(this)[0].innerText = "메뉴닫기";
+          }
+        });
+      });
+
+      // .Html & .Text로 변경하는 법
+      //   $(document).ready(function () {
+      //     // 버튼을 클릭하면
+      //     $("#openMenu").click(function () {
+      //       $("#menuList").toggle("fast"); // 메뉴 노출 변화
+      //       // 버튼이 메뉴보기 라면
+      //       if ($(this).text() === "메뉴닫기") {
+      //         $(this).text("메뉴보기"); // 메뉴닫기로 바꿔주고
+      //       } else {
+      //         $(this).text("메뉴닫기"); // 메뉴보기가 아니라면 메뉴보기로.
+      //       }
+      //     });
+      //   });
+    </script>
+    <meta charset="UTF-8" />
+    <title>Effect 퀴즈</title>
+  </head>
+  <body>
+    <div id="menu">
+      <h3>요리 메뉴</h3>
+      <p><button id="openMenu">메뉴닫기</button></p>
+      <hr />
+      <ul id="menuList">
+        <li>피자 : 20000원</li>
+        <li>치킨 : 25000원</li>
+        <li>탕수육 : 30000원</li>
+        <li>떡볶이 : 10000원</li>
+        <li>김치볶음밥 : 5000원</li>
+      </ul>
+    </div>
+  </body>
+</html>

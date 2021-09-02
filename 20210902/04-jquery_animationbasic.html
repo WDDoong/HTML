@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      #box1 {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(228, 125, 125);
+        position: relative;
+      }
+    </style>
+    <script>
+      /*
+          animation은 선택요소를 움직이거나 크기를 변형하기 위해 사용합니다.
+          요소의 위치를 실시간으로 변경하거나
+          움직이는 작업이 가능합니다.
+
+
+      */
+      $(document).ready(function () {
+        // 애니메이션 구현 법
+        // 방향(top, left, bottom, right)나
+        // 크기(width, height)
+        // 위치(position)에 대한 옵션이 필요하고
+        // 경우에 따라 투명도(opacity)도 조절합니다.
+        $("#box1")
+          .animate(
+            // 옵션
+            {
+              left: "500px", // 왼쪽에서 500px까지 이동
+              width: "200px", // 너비는 200px증가
+              height: "200px", // 높이는 200px까지 증가
+            },
+            2000 // 시간(밀리 초)
+          )
+          // 메서드체이닝을 이용해서
+          // 다시 원래 크기와 위치로 돌아오도록 추가
+          .animate(
+            { left: "0px", width: "100px", height: "100px", opacity: "0.3" },
+            2000
+          );
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <title>Animate</title>
+  </head>
+  <body>
+    <div id="box1">박스1</div>
+  </body>
+</html>
