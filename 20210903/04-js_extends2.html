@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <style></style>
+    <script>
+      /*
+          문제
+          Person과 그것을 상속한 요소를 2개 만들어서
+          활용해주세요.
+
+          Person은 이름과 나이를 가집니다.
+          나머지 요소들은 각자 자기자신의 멤버변수 하나와
+          자신만 사용할 수 있는 메서드(행동)을 하나씩 가집니다.
+      */
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      Person.prototype.setName = function (name) {
+        this.name = name;
+      };
+      Person.prototype.setAge = function (age) {
+        this.age = age;
+      };
+      Person.prototype.getName = function () {
+        return this.name;
+      };
+      Person.prototype.getAge = function () {
+        return this.age;
+      };
+
+      // Person을 상속받은 학생 생성
+      function Student(name, age, major) {
+        // 추가 멤버변수 선언
+        this.major = major;
+      }
+
+      // 1. 부모 상속
+      var student1 = new Person("개나리", "21");
+      Student.prototype = student1;
+
+      // 추가 메서드 선언
+      Student.prototype.setMajor = function (major) {
+        this.major = major;
+      };
+      Student.prototype.getMajor = function () {
+        return this.major;
+      };
+a
+      var studentInfo = new Student("개나리", "21", "경영학과");
+      console.log(studentInfo.getMajor());
+
+      // Person을 상속받은 노동자 생성
+      function Worker(name, age, job) {
+        // 추가 멤버변수 선언
+        this.job = job;
+      }
+
+      // 1. 부모 상속
+      var worker1 = new Person("노동자", "33");
+      Worker.prototype = worker1;
+
+      // 추가 메서드 선언
+      Worker.prototype.setJob = function (job) {
+        this.job = job;
+      };
+      Worker.prototype.getJob = function () {
+        return this.job;
+      };
+
+      var workerInfo = new Worker("노동자", "33", "간호사");
+      console.log(workerInfo.getJob());
+    </script>
+    <meta charset="UTF-8" />
+    <title>퀴-즈</title>
+  </head>
+  <body></body>
+</html>
